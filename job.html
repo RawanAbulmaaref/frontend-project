@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Listings</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./styles/job.css">
+</head>
+<body>
+
+<!-- Top Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom">
+  <div class="container-lg">
+    <!-- Logo -->
+   
+
+    <!-- toggle button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+      aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- collapse -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      
+      <!-- links centered -->
+      <ul class="navbar-nav mx-auto gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link  active" href="#">Jobs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Applications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Saved Jobs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Job Alerts</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+
+        <!-- Search for mobile -->
+        <li class="nav-item d-md-none mt-2">
+          <form class="search-box">
+            <div class="input-group input-group-sm">
+              <input type="text" class="form-control" placeholder="Search...">
+              <button class="btn btn-outline-secondary" type="button">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+        </li>
+      </ul>
+
+      <!-- Right side (always visible) -->
+      <div class="d-flex align-items-center gap-3 ms-lg-auto">
+        <!-- Search desktop only -->
+        <form class="search-box d-none d-md-block">
+          <div class="input-group input-group-sm">
+            <input type="text" class="form-control" placeholder="Search...">
+            <button class="btn btn-outline-secondary" type="button">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </form>
+
+        <!-- bell -->
+        <div class="position-relative">
+          <i class="bi bi-bell fs-5"></i>
+        </div>
+
+        <!-- photo -->
+        <img src="https://i.pravatar.cc/40?img=12" class="rounded-circle" width="36" height="36" alt="avatar" />
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main>
+<!-- Main Content -->
+<div class="container-fluid my-4">
+  <div class="row">
+    <!-- Sidebar Filters -->
+    <div class="col-lg-3 col-md-4 mb-3">
+      <div class="sidebar">
+        <div class="filters-title">Filters</div>
+        
+        <!-- Keywords -->
+        <input type="text" class="form-control mb-3" placeholder="Filter keywords...">
+       <button class="btn my-btn btn-sm w-100 mb-2">View Details</button>
+
+
+        <!-- Job Category -->
+        <div class="mb-4">
+          <h6>Job Category</h6>
+          <div class="form-check"><input class="form-check-input" type="checkbox" checked> <label class="form-check-label">Full-time</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox"> <label class="form-check-label">Part-time</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox"> <label class="form-check-label">Remote</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox"> <label class="form-check-label">Internship</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox"> <label class="form-check-label">Contract</label></div>
+        </div>
+
+        <!-- Location -->
+        <div class="mb-4">
+          <h6>Location</h6>
+          <select class="form-select">
+            <option>All</option>
+            <option>USA</option>
+            <option>UK</option>
+            <option>Germany</option>
+            <option>Remote</option>
+          </select>
+        </div>
+
+        <!-- Salary Range -->
+        <div class="mb-4">
+          <h6>Salary Range</h6>
+           
+
+          <div class="d-flex gap-2"> <input type="number" class="form-control" placeholder="30000"> <input type="number" class="form-control" placeholder="90000"> </div>
+          <input type="range" class="form-range" min="30000" max="200000" step="10000">
+          <div class="container text-center">
+    
+
+    <div class="range-container mt-3">
+      <div class="slider-track"></div>
+      <div class="slider-range" id="slider-range"></div>
+
+    
+      <input type="range" class="form-range" id="min-range" min="0" max="100" value="20">
+    
+      <input type="range" class="form-range" id="max-range" min="0" max="100" value="80">
+    </div>
+
+  </div>
+         <button class="btn my-btn w-100 mt-2 mb-3">Apply Salary</button>
+
+
+          
+          <div class="mb-3">  <select class="form-select"> <option>Experience Level</option> </select> </div> 
+          <div class="mb-3">  <select class="form-select"> <option>Posted Date</option> </select> </div> 
+          <div class="mb-3">  <select class="form-select"> <option>company</option> </select> </div> 
+        </div>
+
+       
+      </div>
+    </div>
+
+    <!-- Job Listings -->
+    <div class="col-lg-9 col-md-8 with-divider">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+
+    <!-- left-->
+    <p class="mb-0 fw-semibold">4 Jobs Found</p>
+
+    <!-- right-->
+    <div class="d-flex align-items-center gap-2">
+      <select class="form-select w-auto">
+        <option>Relevance</option>
+        <option>Newest</option>
+        <option>Oldest</option>
+      </select>
+
+      <div class="btn-group toggle-card" role="group">
+        <button id="gridBtn" class="btn btn-outline-secondary active">
+          <i class="bi bi-grid-3x3-gap-fill"></i>
+        </button>
+        <button id="filterBtn" class="btn btn-outline-secondary">
+          <i class="bi bi-funnel-fill"></i>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+
+
+      <!-- break line-->
+      <div class="section-divider"></div>
+
+      <!-- cards-->
+      <div class="row g-4">
+        <!-- Job Card 1 -->
+        <div class="col-12 col-md-6">
+          <div class="card job-card rounded-4 h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-start justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="rounded-circle bg-light overflow-hidden d-grid place-items-center" style="width:42px; height:42px;">
+                    <img src="./img/img_2.webp" alt="Company Logo" style="width:100%; height:100%; object-fit:cover;">
+                  </div>
+                  <div>
+                    <div class="job-title">Senior Software Engineer</div>
+                    <div class="job-meta">Acme Corp · Remote, USA</div>
+                  </div>
+                </div>
+                <i class="bi bi-heart"></i>
+              </div>
+              <p class="mt-3 mb-3 text-secondary">We are seeking a highly skilled Senior Software Engineer to join our innovative remote team.</p>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="salary"><i class="bi bi-cash-coin me-1"></i>$120,000 – $150,000 · <span class="text-success">2 days ago</span></div>
+                <button class="btn my-btn btn-sm">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job Card 2 -->
+        <div class="col-12 col-md-6">
+          <div class="card job-card rounded-4 h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-start justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="rounded-circle bg-light overflow-hidden d-grid place-items-center" style="width:42px; height:42px;">
+                    <img src="./img/img_3.webp" alt="Company Logo" style="width:100%; height:100%; object-fit:cover;">
+                  </div>
+                  <div>
+                    <div class="job-title">Marketing Specialist</div>
+                    <div class="job-meta">Global Connect · New York, NY</div>
+                  </div>
+                </div>
+                <i class="bi bi-heart"></i>
+              </div>
+              <p class="mt-3 mb-3 text-secondary">Global Connect is looking for an enthusiastic Marketing Specialist to manage our digital marketing campaigns.</p>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="salary"><i class="bi bi-cash-coin me-1"></i>$70,000 – $90,000 · <span class="text-success">2 days ago</span></div>
+                <button class="btn my-btn btn-sm">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job Card 3 -->
+        <div class="col-12 col-md-6">
+          <div class="card job-card rounded-4 h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-start justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="rounded-circle bg-light overflow-hidden d-grid place-items-center" style="width:42px; height:42px;">
+                    <img src="./img/img_4.jpg" alt="Company Logo" style="width:100%; height:100%; object-fit:cover;">
+                  </div>
+                  <div>
+                    <div class="job-title">Cybersecurity Analyst</div>
+                    <div class="job-meta">SecureData Solutions · Dallas, TX</div>
+                  </div>
+                </div>
+                <i class="bi bi-heart"></i>
+              </div>
+              <p class="mt-3 mb-3 text-secondary">SecureData Solutions needs a vigilant Cybersecurity Analyst to protect our systems from cyber threats.</p>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="salary"><i class="bi bi-cash-coin me-1"></i>$95,000 – $115,000 · <span class="text-success">3 days ago</span></div>
+                <button class="btn my-btn btn-sm">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Job Card 4 -->
+        <div class="col-12 col-md-6">
+          <div class="card job-card rounded-4 h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-start justify-content-between">
+                <div class="d-flex align-items-center gap-3">
+                  <div class="rounded-circle bg-light overflow-hidden d-grid place-items-center" style="width:42px; height:42px;">
+                    <img src="./img/img_5.webp" alt="Company Logo" style="width:100%; height:100%; object-fit:cover;">
+                  </div>
+                  <div>
+                    <div class="job-title">Product Designer (UI/UX)</div>
+                    <div class="job-meta">Innovate Nexus · San Francisco, CA</div>
+                  </div>
+                </div>
+                <i class="bi bi-heart"></i>
+              </div>
+              <p class="mt-3 mb-3 text-secondary">Innovate Nexus is searching for a talented Product Designer to craft beautiful, intuitive experiences.</p>
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="salary"><i class="bi bi-cash-coin me-1"></i>$100,000 – $130,000 · <span class="text-success">3 days ago</span></div>
+                <button class="btn my-btn btn-sm">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /row -->
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /container -->
+</main>
+ <footer class="py-3 shadow-sm border-top bg-light mt-auto sticky-bottom">
+      <div
+        class="container d-flex flex-wrap align-items-center justify-content-between gap-2"
+      >
+        <div class="footer-links d-flex gap-3 small mx-auto mx-md-0">
+          <a href="#" class="text-decoration-none text-dark">JobLink</a>
+          <a href="#" class="text-decoration-none text-dark">For Job Seekers</a>
+          <a href="#" class="text-decoration-none text-dark">For Employers</a>
+          <a href="#" class="text-decoration-none text-dark">Resources</a>
+        </div>
+        <div class="d-flex align-items-center gap-3 mx-auto mx-md-0">
+          <i class="bi bi-facebook"></i>
+          <i class="bi bi-twitter"></i>
+          <i class="bi bi-github"></i>
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-youtube"></i>
+        </div>
+      </div>
+    </footer>
+ <script src="./scripts/job.js" ></script>
+    
+  
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
