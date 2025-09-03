@@ -1,0 +1,85 @@
+body {
+      background-color: #f8f9fa;
+    }
+    
+    .upload-box:hover {
+      border-color: #6f42c1;
+    }
+    .uploaded-file {
+      border: 1px solid #6f42c1;
+      border-radius: 8px;
+      padding: 8px 12px;
+      margin-top: 15px;
+      color: #6f42c1;
+      display: inline-block;
+    }
+    .card {
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .list-group-item {
+      border: none;
+      border-bottom: 1px solid #eee;
+    }
+    .card  {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+
+    .card-header {
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+    }
+
+    .list-group-item {
+  border: none;
+  border-bottom: 1px solid #f1f1f1;
+    }
+        .avatar {
+      position: absolute; 
+      top: 92px; 
+      left: 386px; 
+      width: 128px; 
+      height: 128px; 
+      background: #F9EDE9FF; 
+      opacity: 1; 
+      overflow: hidden; 
+      border-radius: 64px; 
+    }
+    .avatar img {
+      width: 128px; 
+      height: 128px; 
+      object-fit: cover;
+    }
+    .avatar .badge {
+      width: 32px; 
+      height: 32px; 
+      border-radius: 16px; 
+    }
+    /* Upload Box */
+    .upload-box {
+      border: 2px dashed #d3d3d3;
+      border-radius: 8px;
+      padding: 40px;
+      text-align: center;
+      color: #6c757d;
+      cursor: pointer;
+    }
+    .file-item {
+      border: 1px solid #f1f1f1;
+      border-radius: 6px;
+      padding: 10px 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 15px;
+      background: #f8f9fa;
+    }
+    .file-item strong {
+      color: #212529;
+    }
+
+
+   

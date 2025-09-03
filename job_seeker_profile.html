@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"/>
+
+  <style>
+    /* Avatar */
+    .avatar {
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto; /* يخلي الصورة في النص */
+    }
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Upload Box */
+    .upload-box {
+      border: 2px dashed #d3d3d3;
+      border-radius: 8px;
+      padding: 40px;
+      text-align: center;
+      color: #6c757d;
+      cursor: pointer;
+      background: #fafafa;
+    }
+    .upload-box:hover {
+      background: #f1f1f1;
+    }
+    .form-control-file {
+      display: none;
+    }
+    .custom-file-label {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 20px;
+      border: 1px solid #0d6efd;
+      border-radius: 6px;
+      color: #0d6efd;
+      background-color: #fff;
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .custom-file-label:hover {
+      background-color: #0d6efd;
+      color: #fff;
+    }
+  </style>
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+    <div class="container d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="#"> 
+        <img src="Logo.png" alt="Logo" height="30"> 
+      </a>
+
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Jobs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Applications</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Saved Jobs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Job Alerts</a></li>
+        <li class="nav-item"><a class="nav-link active text-primary" href="#">Profile</a></li>
+      </ul>
+
+      <div class="d-flex align-items-center">
+        <div class="position-relative me-3">
+          <i class="bi bi-bell fs-4"></i>
+        </div>
+        <img src="https://tse4.mm.bing.net/th/id/OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH?rs=1&pid=ImgDetMain&o=7&rm=3" alt="User" class="rounded-circle" width="35">
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container py-5 flex-grow-1">
+    <h2 class="mb-1">My Profile</h2>
+    <p class="text-muted">Manage your professional information for JobLink.</p>
+
+    <div class="row g-4">
+      <!-- Left Column -->
+      <div class="col-lg-8">
+        <!-- Profile Picture -->
+        <div class="card mb-4 text-center p-4">
+          <h6 class="fw-bold mb-3">Profile Picture</h6>
+          
+          <div class="avatar mb-3">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Profile Picture">
+          </div>
+          
+          <button class="btn btn-primary">Change Photo</button>
+        </div>
+
+        <!-- Personal Information -->
+        <div class="card mb-4">
+          <div class="card-header fw-bold">Personal Information</div>
+          <div class="card-body">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" value="Liam Basil">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Professional Headline</label>
+                <input type="text" class="form-control" value="Graphic Designer & UI/UX Specialist">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" value="liam.basil@example.com">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label">Phone Number</label>
+                <input type="text" class="form-control" value="+1 (555) 123-4567">
+              </div>
+              <div class="col-12">
+                <label class="form-label">Location</label>
+                <input type="text" class="form-control" value="San Francisco, CA">
+              </div>
+              <div class="col-12">
+                <label class="form-label">About Me</label>
+                <textarea rows="4" class="form-control">Highly creative and knowledgeable Graphic Designer with a strong background in developing and executing visual design concepts...</textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary w-100">Save Changes</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Resume / CV Section -->
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title">Resume / CV</h5>
+            <p class="text-muted">Upload your latest resume. PDF format preferred.</p>
+
+            <!-- Upload Box -->
+            <div class="upload-box">
+              <p class="mb-2">Drag and drop your file here, or</p>
+              <label for="resumeInput" class="custom-file-label">Browse Files</label>
+              <input type="file" id="resumeInput" class="form-control-file" accept=".pdf">
+            </div>
+          </div>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="card mb-4">
+          <div class="card-header d-flex justify-content-between">
+            <span>Work Experience</span>
+            <button class="btn btn-sm btn-outline-secondary">+ Add New</button>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Graphic Designer</li>
+            <li class="list-group-item">Junior Designer</li>
+          </ul>
+        </div>
+
+        <!-- Education -->
+        <div class="card mb-4">
+          <div class="card-header d-flex justify-content-between">
+            <span>Education</span>
+            <button class="btn btn-sm btn-outline-secondary">+ Add New</button>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Bachelor of Fine Arts in Graphic Design</li>
+            <li class="list-group-item">Associate of Arts in Digital Media</li>
+          </ul>
+        </div>
+
+        <!-- Skills -->
+        <div class="card mb-4">
+          <div class="card-header d-flex justify-content-between">
+            <span>Skills</span>
+            <button class="btn btn-sm btn-outline-secondary">+ Add New</button>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Adobe Creative Suite (Photoshop, Illustrator, InDesign)</li>
+            <li class="list-group-item">UI/UX Design</li>
+            <li class="list-group-item">Branding & Identity</li>
+            <li class="list-group-item">Typography</li>
+            <li class="list-group-item">Motion Graphics</li>
+            <li class="list-group-item">Figma</li>
+            <li class="list-group-item">HTML/CSS</li>
+          </ul>
+        </div>
+
+        <!-- Certificates & Awards -->
+        <div class="card mb-4">
+          <div class="card-header d-flex justify-content-between">
+            <span>Certificates & Awards</span>
+            <button class="btn btn-sm btn-outline-secondary">+ Add New</button>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Certified UX Designer</li>
+            <li class="list-group-item">Advanced Photoshop Techniques</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="fw-bold">Profile Completeness</h6>
+            <p><strong>86%</strong></p>
+            <div class="progress mb-3">
+              <div class="progress-bar" role="progressbar" style="width: 86%"></div>
+            </div>
+            <p class="small">Complete your profile to attract more employers!</p>
+            <h6 class="fw-bold">Suggestions:</h6>
+            <p class="small mb-0">Upload a professional profile picture.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-3 shadow-sm border-top bg-white mt-auto sticky-bottom">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between gap-2">
+      <div class="footer-links d-flex gap-3 small mx-auto mx-md-0">
+        <a href="#" class="text-decoration-none text-dark">JobLink</a>
+        <a href="#" class="text-decoration-none text-dark">For Job Seekers</a>
+        <a href="#" class="text-decoration-none text-dark">For Employers</a>
+        <a href="#" class="text-decoration-none text-dark">Resources</a>
+      </div>
+      <div class="d-flex align-items-center gap-3 mx-auto mx-md-0">
+        <i class="bi bi-facebook"></i>
+        <i class="bi bi-twitter"></i>
+        <i class="bi bi-github"></i>
+        <i class="bi bi-instagram"></i>
+        <i class="bi bi-youtube"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
