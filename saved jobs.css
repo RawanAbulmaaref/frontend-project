@@ -1,0 +1,29 @@
+.active {
+    color: #284c8a !important;
+    font-weight: bold;
+}
+
+.footer-links>a:hover {
+    color: black !important;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #284c8a;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
