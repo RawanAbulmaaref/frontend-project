@@ -1,0 +1,54 @@
+.active {
+    color: #284c8a !important;
+    font-weight: bold;
+}
+
+.footer-links>a:hover {
+    color: black !important;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #284c8a;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.section-one-btn:hover {
+    transition: 0.3s;
+    background-color: rgba(77, 78, 80, 0.8) !important;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.second-section-btn:hover,
+.edit-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 320px) {
+    .card-title {
+        width: 150px !important;
+    }
+    .card-body .btn {
+        font-weight: 200 !important;
+        font-size: 12px !important;
+    }
+}
