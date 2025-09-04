@@ -1,6 +1,6 @@
 <div align="center" style="background: linear-gradient(90deg, #0f172a, #1e293b); padding: 25px; border-radius: 12px; color: white;">
 
-<h1><strong>JoBest</strong> - Job Portal Website</h1>
+<h1><strong>JobLink</strong> - Job Portal Website</h1>
 <p><i>A role-based platform for Job Seekers, Employers, and Admins</i></p>
 
 </div>
