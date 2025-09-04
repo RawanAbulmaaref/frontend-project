@@ -65,4 +65,14 @@
   }
 }
 
+    body {
+      background: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80") no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(10px);
+    }
   
+    main {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+  
+    }

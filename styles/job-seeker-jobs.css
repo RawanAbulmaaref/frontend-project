@@ -153,3 +153,8 @@
   border-color: #0d1a32;
 }
 
+
+     body {
+      background: linear-gradient(135deg, #f5f7fa, #f1f6ff, #dadcdf);
+  
+  }
