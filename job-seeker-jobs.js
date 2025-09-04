@@ -2,7 +2,7 @@ const minRange = document.getElementById('min-range');
     const maxRange = document.getElementById('max-range');
     const rangeFill = document.getElementById('slider-range');
     const output = document.getElementById('output');
-    const gap = 1; // أقل فرق بين الحدين
+    const gap = 1; 
 
     function updateSlider() {
       let minVal = parseInt(minRange.value);
