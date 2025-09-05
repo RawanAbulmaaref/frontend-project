@@ -311,7 +311,7 @@ nav{
 .right button:hover {
   color: #FFFFFFFF; /* white */
   background: #0d6efd; 
-}
+} 
 /* Pressed */
 .right button:hover:active {
   color: #FFFFFFFF; /* white */
@@ -522,16 +522,6 @@ footer .icons{
 body {
   overflow-x: hidden;
 }
-/* footer{
-  padding-bottom: 10px;
-  margin-top: 0;
-  height: auto;
-} */
-/* footer img:hover{
-  cursor: pointer;
-  stroke: #0e5ad6; 
-}
-*/
 
 /* page2 */
 
@@ -840,21 +830,6 @@ tr td .btn:hover{
   background-color:#22498c;
 }
 
-/* .footer-links a{color:#6b7280; text-decoration:none}
-.footer-links a:hover{text-decoration:underline}
-@media (max-width: 768px){
-  .footer-links{
-    margin: auto;
-  }
-  .align-items-center{
-    margin: auto;
-  }
-}
-
-} */
- .align-items-center i:hover{
-  cursor: pointer;
- color: #2067e2;}
 footer {
   position: fixed;
   bottom: 0;
