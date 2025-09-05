@@ -852,9 +852,9 @@ tr td .btn:hover{
 }
 
 } */
- .align-items-center i:hover{
+ /* .align-items-center i:hover{
   cursor: pointer;
- color: #2067e2;}
+ color: #2067e2;} */
 footer {
   position: fixed;
   bottom: 0;
