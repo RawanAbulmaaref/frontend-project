@@ -86,7 +86,7 @@
     display: flex; 
     align-items: center; 
     justify-content: space-between; 
-    font-family: Inter; 
+    
     font-size: 12px; 
     line-height: 20px; 
     font-weight: 400; 
@@ -107,7 +107,7 @@
 }
 
 .row .left h1{
-  /* font-family: Inter;  */
+
   font-size: 36px; 
   line-height: 45px; 
   font-weight: 700; 
@@ -440,7 +440,7 @@ footer {
   background: #565E6CFF; /* neutral-600 */
 }
 .row .left h1{
-  font-family: Inter; /* Body */
+ /* Body */
   font-size: 36px; 
   line-height: 45px; 
   font-weight: 700; 
