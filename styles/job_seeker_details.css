@@ -388,3 +388,63 @@ footer {
   bottom: 0;
   width: 100%;
 }
+.section-site .sec .tag{ 
+    width: 214px; 
+    height: 30px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    font-family: Inter; /* Body */
+    font-size: 12px; 
+    line-height: 20px; 
+    font-weight: 400; 
+    opacity: 1; 
+    color:black
+}
+/* Tag - Item */
+.section-site .sec .tag {
+  height: 30px; 
+  padding-left: 6px; 
+  padding-right: 6px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  border-radius: 9999px; 
+}
+.section-site .sec .tag > * {
+  padding-left: 2px; 
+  padding-right: 2px; 
+}
+/* Tag item 1 */
+.section-site .sec .tag:nth-child(1) {
+  font-family: Roboto; 
+  font-size: 14px; 
+  line-height: 22px; 
+  font-weight: 600; 
+  background: #F3F6FCFF; 
+  border-color: #00000000; /* transparent */
+}
+/* Tag item 1 - Pressed */
+.section-site .sec .tag:nth-child(1):hover {
+  color: #FFFFFFFF; /* white */
+  background: #424955FF; /* neutral-650 */
+}
+/* Tag item 1 - Pressed */
+.tag:nth-child(1):hover:active {
+  color: #FFFFFFFF; /* white */
+  background: #323842FF; /* neutral-700 */
+}
+/* Tag item 1 - Pressed */
+.tag:nth-child(1):disabled {
+  color: #FFFFFFFF; /* white */
+  background: #565E6CFF; /* neutral-600 */
+}
+.row .left h1{
+  font-family: Inter; /* Body */
+  font-size: 36px; 
+  line-height: 45px; 
+  font-weight: 700; 
+  margin-top: 10px
+  ;
+  color: #171A1FFF; /* neutral-900 */
+}
