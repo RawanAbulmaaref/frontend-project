@@ -28,6 +28,18 @@
     background-color: #284c8a !important;
     color: #fff !important;
 }
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
 
 
 .card {

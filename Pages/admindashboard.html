@@ -23,108 +23,135 @@
 </head>
 
 <body>
-     <header class="border-bottom">
-        <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom">
-            <div class="container-fluid">
-                <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navMenu"
-                aria-controls="navMenu"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                 <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
-          <i class="fa-solid fa-link  ms-md-5 " style="color: #284C99;"></i>
-          <span>JobLink</span>
-        </a>
-                <div class="collapse navbar-collapse" id="navMenu">
-                    <ul class="navbar-nav mx-auto gap-lg-2">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./admindashboard.html">Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="./admins-jobs-managment.html">Jobs-Management</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="d-flex align-items-center gap-3 ms-lg-auto">
-                    <div class="position-relative" title="notifications"><i class="bi bi-bell fs-5"></i></div>
-                    <img
-                        src="https://i.pravatar.cc/40?img=12"
-                        class="rounded-circle"
-                        width="36"
-                        height="36"
-                        alt="avatar"
-                    />
-                </div>
-            </div>
-        </nav>
-    </header>
- <main>
 
+<header class="border-bottom bg-white">
+  <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom">
+    <div class="container-fluid">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+        <i class="bi bi-link-45deg ms-md-5 text-primary"></i>
+        <span>JobLink</span>
+      </a>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto gap-lg-2">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Jobs-Management</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-flex align-items-center gap-3 ms-lg-auto">
+        <i class="bi bi-bell fs-5"></i>
+        <img src="https://i.pravatar.cc/40?img=12" width="38" height="38" class="rounded-circle">
+      </div>
+
+    </div>
+  </nav>
+</header>
+
+<main>
 <div class="container py-4">
+
   <h3 class="fw-bold mb-3">Admin Dashboard</h3>
 
-  <!-- Overview Statistics -->
+  <!-- Overview -->
   <h6 class="section-title">Overview Statistics</h6>
   <div class="row g-3 mb-4">
+
     <div class="col-md-3">
       <div class="card p-3 text-center">
+        <i class="bi bi-people stat-icon"></i>
         <h6>Total Users</h6>
         <div class="stat-value">12,500</div>
         <div class="stat-change">+5% vs. last month</div>
       </div>
     </div>
+
     <div class="col-md-3">
       <div class="card p-3 text-center">
+        <i class="bi bi-building stat-icon"></i>
         <h6>Active Employers</h6>
         <div class="stat-value">850</div>
         <div class="stat-change">+2% vs. last month</div>
       </div>
     </div>
+
     <div class="col-md-3">
       <div class="card p-3 text-center">
+        <i class="bi bi-clipboard-check stat-icon"></i>
         <h6>Active Job Postings</h6>
         <div class="stat-value">3,200</div>
         <div class="stat-change">+8% vs. last month</div>
       </div>
     </div>
+
     <div class="col-md-3">
       <div class="card p-3 text-center">
+        <i class="bi bi-file-earmark-text stat-icon"></i>
         <h6>Applications Received</h6>
         <div class="stat-value">7,120</div>
         <div class="stat-change">+10% vs. last month</div>
       </div>
     </div>
+
   </div>
 
-  <!-- Job Postings Activity -->
-   <div>Job Posting Activity</div>
-   <br>
-  <div class="card p-4">
-  <h6 class="fw-semibold">Monthly Job Postings & New Users</h6>
-  <p class="text-muted">Overview of platform growth.</p>
-  <canvas id="jobChart" height="300"></canvas>
-</div>
-<br>
-  <!-- Recent System Activities -->
+  <!-- Chart -->
+  <h6 class="section-title">Job Posting Activity</h6>
+
+  <div class="card p-4 mb-4">
+    <h6 class="fw-semibold">Monthly Job Postings & New Users</h6>
+    <p class="text-muted">Overview of platform growth.</p>
+    <canvas id="jobChart" height="300"></canvas>
+  </div>
+
+  <!-- Events -->
   <h6 class="section-title">Recent System Activities</h6>
+
   <div class="card p-3">
     <h6>Latest Events</h6>
+
     <ul class="list-unstyled mt-3 mb-0">
-      <li>💼 New employer <b>Tech Solutions Inc.</b> registered. <small class="text-muted float-end">5 mins ago</small></li>
-      <li>🧑‍💻 Job <b>Senior Software Engineer</b> posted by <b>Global Corp</b>. <small class="text-muted float-end">30 mins ago</small></li>
-      <li>👩‍💼 User <b>Sarah Jones</b> updated her profile. <small class="text-muted float-end">1 hour ago</small></li>
-      <li>⚠️ System alert: Database usage at 85%. <small class="text-muted float-end">3 hours ago</small></li>
-      <li>🔑 Admin <b>Michael Lee</b> logged in. <small class="text-muted float-end">Yesterday</small></li>
+
+      <li><i class="bi bi-building text-primary me-2"></i>
+        New employer <b>Tech Solutions Inc.</b> registered.
+        <small class="text-muted float-end">5 mins ago</small>
+      </li>
+
+      <li><i class="bi bi-laptop text-success me-2"></i>
+        Job <b>Senior Software Engineer</b> posted by <b>Global Corp</b>.
+        <small class="text-muted float-end">30 mins ago</small>
+      </li>
+
+      <li><i class="bi bi-person-circle text-info me-2"></i>
+        User <b>Sarah Jones</b> updated her profile.
+        <small class="text-muted float-end">1 hour ago</small>
+      </li>
+
+      <li><i class="bi bi-exclamation-triangle text-warning me-2"></i>
+        System alert: Database usage at 85%.
+        <small class="text-muted float-end">3 hours ago</small>
+      </li>
+
+      <li><i class="bi bi-key text-secondary me-2"></i>
+        Admin <b>Michael Lee</b> logged in.
+        <small class="text-muted float-end">Yesterday</small>
+      </li>
+
     </ul>
   </div>
+
 </div>
- </main>
+</main>
+
  <footer class="py-3 shadow-sm border-top bg-light mt-auto sticky-bottom">
       <div
         class="container d-flex flex-wrap align-items-center justify-content-between gap-2"

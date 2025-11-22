@@ -32,6 +32,46 @@
     background-color: #284c8a !important;
     transition: transform 0.3s ease-in-out;
 }
+body {
+  background: #f5f7fa;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+
+.section-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.stat-icon {
+  font-size: 40px;
+  color: #284C99;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.stat-change {
+  font-size: 14px;
+  color: #16a34a;
+}
+
+ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
 
 .btn-primary:hover {
     background-color: #1e3866 !important;
